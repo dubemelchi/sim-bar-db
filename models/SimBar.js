@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../config/database');
 
-const SimBar = db.define('simbar', {
+const SimBar = db.define('drinks', {
   drink_name: {
     type: Sequelize.STRING
   },
