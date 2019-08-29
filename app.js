@@ -3,20 +3,8 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
 
-const Sequelize = require('sequelize');
-const db = new Sequelize('simpleBartender', 'root', 'password', {
-  host: 'localhost',
-  port: 8889,
-  dialect: 'mysql',
-
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000
-  },
-});
-
+// database
+const db = require('./config/database');
 // test db
 db.authenticate()
   .then(() => console.log('Database connected...'))
