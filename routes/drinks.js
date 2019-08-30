@@ -16,8 +16,8 @@ drinks.findAll()
 // add drink list
 router.get('/add', (req, res) => {
   const data = {
-    drink_name: 'modelo',
-    drink_cost: 8.00
+    drink_name: 'chadonnay',
+    drink_cost: 16.00
   }
 
   let { drink_name, drink_cost } = data;
