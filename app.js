@@ -12,6 +12,10 @@ db.authenticate()
 
 const app = express();
 
+// handlebars
+app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
 app.get('/', (req, res) => res.send('INDEX'));
 
 // Simbar routes
