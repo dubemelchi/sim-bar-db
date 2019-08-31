@@ -7,8 +7,9 @@ const drinks = require('../models/SimBar');
 router.get('/', (req, res) => 
 drinks.findAll()
   .then(drinks => {
-    console.log(drinks);
-    res.sendStatus(200);
+    res.render('drinks', {
+      drinks
+    });
   })
   .catch(err => console.log(err))
 );
