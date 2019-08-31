@@ -14,8 +14,11 @@ drinks.findAll()
   .catch(err => console.log(err))
 );
 
-// add drink list
-router.get('/add', (req, res) => {
+// display drinks form options???
+router.get('/order', (req, res) => res.render('order'));
+
+// add to tab
+router.post('/order', (req, res) => {
   const data = {
     drink_name: 'chadonnay',
     drink_cost: 16.00
