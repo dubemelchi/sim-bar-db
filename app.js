@@ -19,7 +19,7 @@ app.set('view engine', 'handlebars');
 // set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// index route
+// home/index route
 app.get('/', (req, res) => res.render('index', { layout: 'landing'}));
 
 // Simbar routes
